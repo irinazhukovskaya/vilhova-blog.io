@@ -1,0 +1,87 @@
+{% include "header.njk" %}
+
+<div class="page-heading">
+    <div class="container">
+        <div class="heading-content">
+            <h1>Мої <em> Блоги</em></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="blog-entries">
+    blog-entries
+    <div class="container">
+        <div class="col-md-9">
+            <div class="blog-posts">
+                <div class="row">
+
+                    {% for post in collections.blog %}
+
+                        <div class="col-md-12">
+                            <div class="blog-post">
+                                <img src="{{ thumbnail }}" alt="">
+                                <div class="text-content">
+                                    <span> {{ post.data.blogDate }} </span>
+                                    <h2>{{ post.data.title }}</h2>
+                                    <p>{{ post.data.desc }}</p>
+                                    <div class="simple-btn">
+                                        <a href="{{ post.url }}">Дивитися білбше</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+
+
+                     <div class="col-md-12">
+                     <ul class="page-number">
+                     <li class="active"><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">3</a></li>
+                     <li><a href="#">></a></li>
+                     </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="side-bar">
+                <div class="search">
+                    <fieldset>
+                        <input name="search" type="text" class="form-control" id="search" placeholder="Search..."
+                               required="">
+                    </fieldset>
+                </div>
+                <div class="archives">
+                    <div class="sidebar-heding">
+                        <h2>Архіви</h2>
+                    </div>
+
+                </div>
+                <div class="recent-posts">
+                    <div class="sidebar-heding">
+                        <h2>Останні повідомлення</h2>
+                    </div>
+
+                </div>
+                <div class="categories">
+                    <div class="sidebar-heding">
+                        <h2>Категорії</h2>
+                    </div>
+
+                </div>
+                <div class="latest-gallery">
+                    <div class="sidebar-heding">
+                        <h2>Остання галлерея</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.njk" %}

@@ -1,0 +1,81 @@
+{% include "header.njk" %}
+
+<div class="blog-entries">
+    <div class="container">
+        <div class="col-md-9">
+            <div class="blog-posts">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="single-blog-post">
+                            <img src="{{ thumbnail }}" alt="">
+                            <div class="text-content">
+                                <h2>{{ title }}</h2>
+                                <p>{{ blogDate }}</p>
+                                <span><a href="#">Admin</a> / <a href="#">{{ blogDate }}</a> / <a href="#">Branding</a></span>
+                                <p>{{ content | safe }}</p>
+                                <img src="{{ thumbnail }}" alt="blog post-1"/>
+                                <br><br><a href="/blog/">повернутися в блог</a>
+                                <br><br>
+                                <div class="tags-share">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="tags">
+                                                <li>Tags:</li>
+                                                <li><a href="#">life</a>,</li>
+                                                <li><a href="#">nature</a>,</li>
+                                                <li><a href="#">life is good</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="share">
+                                                <li>Share:</li>
+                                                <li><a href="#">facebook</a>,</li>
+                                                <li><a href="#">twitter</a>,</li>
+                                                <li><a href="#">behance</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="side-bar">
+                <div class="search">
+                    <fieldset>
+                        <input name="search" type="text" class="form-control" id="search" placeholder="Search..." required="">
+                    </fieldset>
+                </div>
+                <div class="archives">
+                    <div class="sidebar-heding">
+                        <h2>Архіви</h2>
+                    </div>
+
+                </div>
+                <div class="recent-posts">
+                    <div class="sidebar-heding">
+                        <h2>Останні повідомлення</h2>
+                    </div>
+
+                </div>
+                <div class="categories">
+                    <div class="sidebar-heding">
+                        <h2>Категорії</h2>
+                    </div>
+
+                </div>
+                <div class="latest-gallery">
+                    <div class="sidebar-heding">
+                        <h2>Остання галлерея</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.njk" %}
